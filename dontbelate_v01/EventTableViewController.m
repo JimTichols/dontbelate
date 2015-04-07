@@ -16,18 +16,32 @@
 
 
 @implementation EventTableViewController
+  @synthesize events;
 
-@synthesize events;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    self.events = [NSMutableArray arrayWithCapacity:20];
+    Event *event = [[Event alloc] init];
+    event.name = @"Bill Evans";
+    event.location = @"Bushwick";
+    event.time = @"12p";
+    [self.events addObject:event];
+    event = [[Event alloc] init];
+    event.name = @"Oscar Peterson";
+    event.location = @"Manhattan";
+    event.time = @"2p";
+    [self.events addObject:event];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.tableView reloadData];
+
+//    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,29 +52,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.events count];;
+    return [self.events count];
+    //return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"Hellooooooooooooooo %@");
 	UITableViewCell *cell = [tableView
     dequeueReusableCellWithIdentifier:@"EventCell"];
-//	Event *event = [self.events objectAtIndex:indexPath.row];
-//	cell.textLabel.text = event.name;
-//	cell.detailTextLabel.text = event.location;
-//    NSLog(@"Cell: %@", cell);
-
-    cell.textLabel.text = @"EVENT NAME";
-    cell.detailTextLabel.text = @"EVENT NAME";
+  Event *event = [self.events objectAtIndex:indexPath.row];
+  cell.textLabel.text = event.name;
+  cell.detailTextLabel.text = event.location;
+    NSLog(@"Cell: %@", cell);
 
     return cell;
 }

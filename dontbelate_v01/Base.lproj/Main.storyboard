@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="chk-78-J9g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="chk-78-J9g">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +43,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="I6h-YG-7Ep" kind="show" identifier="NextScreen" id="jKS-hf-6MI"/>
+                                            <segue destination="I6h-YG-7Ep" kind="show" id="5fm-ha-nlo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,13 +78,13 @@
         <!--Event Table View Controller-->
         <scene sceneID="Jla-of-80I">
             <objects>
-                <tableViewController storyboardIdentifier="EventTableViewController" id="I6h-YG-7Ep" customClass="EventTableViewController" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="EventTableViewController" storyboardIdentifier="EventTableViewController" id="I6h-YG-7Ep" customClass="EventTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EventsTableController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="px1-gw-1hU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventCell" textLabel="oOw-di-ZB5" detailTextLabel="cbz-nX-vly" style="IBUITableViewCellStyleSubtitle" id="jEt-zQ-lAo">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="EventCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventCell" textLabel="oOw-di-ZB5" detailTextLabel="cbz-nX-vly" style="IBUITableViewCellStyleSubtitle" id="jEt-zQ-lAo">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jEt-zQ-lAo" id="iUf-Dn-a61">
                                     <autoresizingMask key="autoresizingMask"/>

@@ -24,33 +24,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	events = [NSMutableArray arrayWithCapacity:20];
-	Event *event = [[Event alloc] init];
-	event.name = @"Bill Evans";
-	event.location = @"Bushwick";
-	event.time = @"12p";
-	[events addObject:event];
-	event = [[Event alloc] init];
-	event.name = @"Oscar Peterson";
-	event.location = @"Manhattan";
-	event.time = @"2p";
-	[events addObject:event];
-	
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
-                                                             bundle: nil];
- 
-    UIViewController *uiViewController = (UIViewController*)[mainStoryboard
-                                                       instantiateViewControllerWithIdentifier: @"EventTableViewController"];
- 
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:uiViewController];
 
-	EventTableViewController *eventsViewController = [[navigationController viewControllers] objectAtIndex: 0];
-
-	eventsViewController.events = events;
-
-    NSLog(@"Event: %@", event.name);
-
-    return YES;
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
