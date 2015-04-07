@@ -43,7 +43,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="I6h-YG-7Ep" kind="show" id="5fm-ha-nlo"/>
+                                            <segue destination="ggb-bY-GYR" kind="show" id="nja-ik-z4i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,7 +75,23 @@
             </objects>
             <point key="canvasLocation" x="1762" y="-372"/>
         </scene>
-        <!--Event Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="123-xb-OHo">
+            <objects>
+                <navigationController id="ggb-bY-GYR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYw-8Y-H9H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I6h-YG-7Ep" kind="relationship" relationship="rootViewController" id="mli-em-BB9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joC-eF-kYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="-380"/>
+        </scene>
+        <!--Events-->
         <scene sceneID="Jla-of-80I">
             <objects>
                 <tableViewController restorationIdentifier="EventTableViewController" storyboardIdentifier="EventTableViewController" id="I6h-YG-7Ep" customClass="EventTableViewController" sceneMemberID="viewController">
@@ -110,10 +126,13 @@
                             <outlet property="delegate" destination="I6h-YG-7Ep" id="p5A-h5-Tcf"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Events" id="Yql-dO-te9"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHY-Ru-smX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640" y="-372"/>
+            <point key="canvasLocation" x="3122" y="-380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xLW-7S-NKZ">
