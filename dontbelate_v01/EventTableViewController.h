@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventDetailsViewController.h"
 
-@interface EventTableViewController : UITableViewController
+
+@interface EventTableViewController : UITableViewController <EventDetailsViewControllerDelegate>
 @property (nonatomic, strong) NSMutableArray *events;
 
 @end
